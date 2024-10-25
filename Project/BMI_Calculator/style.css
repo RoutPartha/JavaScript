@@ -1,0 +1,32 @@
+.container{
+    height: 500px;
+    width: 1100px;
+    background-color: bisque;
+}
+#height,#width{
+    width: 150px;
+    height: 30px;
+}
+#weight-guide{
+    margin-left: 75px;
+    margin-top: 25px;
+}
+#btn{
+    width: 100px;
+    height: 30px;
+    border: solid black 2px;
+    background-color:rgb(45, 143, 204);
+    margin-left: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+
+}
+#result{
+    font-size: 30px;
+   margin-left: 50px;
+   margin-top: 25px; 
+}
+h1{
+    padding-left: 25px;
+    padding-top: 25px;
+}
