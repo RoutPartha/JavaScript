@@ -5,3 +5,6 @@ setInterval(function(){
    // console.log(date.toLocaleTimeString);
     clock.innerHTML=date.toLocaleTimeString()
 },1000);
+
+// Syntax:
+// setInterval(function(){},1000)

@@ -14,24 +14,24 @@ let numGuess=1
 let playGame=true
 if (playGame) {
     submit.addEventListener('click',function(event){
-        event.preventDefault()
-        const guess=parseInt(userInput.value)
+        event.preventDefault();
+        const guess=parseInt(userInput.value);
         console.log(guess);
         
-        validateGuess(guess)
+        validateGuess(guess);
     });   
 }
 
 function validateGuess(guess){
 //it check the value is exist btw 1 and 100
 if (isNaN(guess)) {
-    alert('Please enter a valid Number')
+    alert('Please enter a valid Number');
     
 }else if (guess<1) {
-    alert('Please enter a Number more than One')
+    alert('Please enter a Number more than One');
     
 }else if (guess>100) {
-    alert('Please enter a Number less Than 100')
+    alert('Please enter a Number less Than 100');
     
 } else {
     prevGuess.push(guess)
@@ -41,8 +41,8 @@ if (isNaN(guess)) {
         endGame()
         
     }else{
-        displayGuess(guess)
-        checkGuess(guess)
+        displayGuess(guess);
+        checkGuess(guess);
     }
 }
 }
@@ -50,29 +50,35 @@ if (isNaN(guess)) {
 function checkGuess(guess){
 //check high or low
 if(guess===randomNumber){
-    displayMessage(`You Guessed it Right`)
-    endGame()
+    displayMessage(`You Guessed it Right`);
+    endGame();
 }else if(guess<randomNumber){
-    displayMessage(`Number is Tooo Low`)
+    displayMessage(`Number is Tooo Low`);
 }else if(guess>randomNumber){
-    displayMessage(`Number is Too High `)
+    displayMessage(`Number is Too High `);
 }
 }
 
 function displayGuess(guess){
 //it will clean value for input new value and ubdate Previous guess and Remaining
      userInput.value=''
-     guessSlot.innerHTML+=`${guess}`
+     guessSlot.innerHTML+=`${guess}  `;
      numGuess++;
-     remaining.innerHTML=`${11-numGuess}`
+     remaining.innerHTML=`${11-numGuess}, `;
 
 }
 
 function displayMessage(message){
-//
+LowOrHi.innerHTML=`<h2>${message}</h2>`;
 }
 function endGame(){
-    
+    userInput.value=''
+    userInput.setAttribute('disabled','');
+    p.classList.add('button');
+    p.innerHTML=`<h2 id="newGame">Start new Game</h2>`;
+    startOver.appendChild(p)
+    playGame=false;
+    newGame()
 }
 
 function newGame(){

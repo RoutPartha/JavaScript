@@ -24,7 +24,7 @@
     function addOptiLanguage(langName){
         const li=document.createElement('li')
         li.appendChild(document.createTextNode(langName))
-        document.querySelector('.language').append(li)
+        document.querySelector('.language').appendChild(li)
     }
     addOptiLanguage('golang')
     
@@ -42,7 +42,7 @@ const firstLang=document.querySelector("li:first-child")
 firstLang.outerHTML='<li>TypeScript</li>'
 
 //remove
-const lastLang=document.querySelector('li:last-child')
+const lastLang=document.querySelector('li:last-child') 
 lastLang.remove()
 </script>
 </html>
