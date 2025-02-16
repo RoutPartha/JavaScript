@@ -90,7 +90,7 @@ audioElement.addEventListener('timeupdate',()=>{
        //audioElement.src = songs[index].filePath;
        //audioElement.src =`songs / ${index + 1}.mp3`;
     //    console.log(songs[index].filePath);
-       audioElement.src = songs[index+1].filePath;
+       audioElement.src = songs[index].filePath;
        audioElement.currentTime=0;
        audioElement.play();
        masterPaly.classList.remove('fa-play-circle');
