@@ -1,5 +1,3 @@
-
-
 //Initialize the variables
 let songIndex=0;
 let audioElement=new Audio('Song/Perfect.mp3');
